@@ -1,0 +1,32 @@
+<h3> View Employee Details :-</h3>
+<div>
+    <div>
+        <label> <b> First Name: </b></label> {{employee.firstName}}
+    </div>
+    <div>
+        <label> <b> Last Name: </b></label> {{employee.lastName}}
+    </div>
+    <div>
+        <label> <b> Email Id: </b></label> {{employee.emailId}}
+    </div>
+    <div>
+        <label> <b> Mobile No: </b></label> {{employee.mobileNo}}
+    </div>
+    <div>
+        <label> <b> Address: </b></label> 
+        <div *ngFor="let add of employee.addressList">
+            <label> <b>Address type: </b>{{add.addressType}}</label><br>
+            <label >city: {{add.city}}</label><br>
+            <label >Zipcode: {{add.zipCode}}</label><br>
+            <label >State: {{add.state}}</label><br>
+            
+        </div>
+
+    </div>
+    <div>
+        <label> <b> Designation </b></label> {{employee.ds.designation}}
+    </div>
+    <div>
+        <label> <b> Salary: </b></label> {{employee.ds.salary}}
+    </div>
+</div>
